@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Basic security: strict Content Security Policy (adjust hosts as needed) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src https://fonts.gstatic.com;">
+    <!-- Stronger Content Security Policy for production: adjust external hosts as needed -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src https://fonts.gstatic.com;">
+    <meta name="referrer" content="no-referrer" />
     <meta name="theme-color" content="#f59e0b" />
     <title>Soltana Wear</title>
   </head>
   <body class="antialiased bg-white text-gray-900">
     <div id="root"></div>
 
-    <!-- Vite / modern React entry (expects src/main.tsx or src/main.jsx) -->
+    <!-- Vite / modern React entry (expects src/main.tsx) -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
